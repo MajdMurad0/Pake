@@ -97,7 +97,7 @@ jobs:
         uses: rui314/setup-mold@v1
 
       - name: Rust cache restore
-        uses: actions/cache/restore@v4.2.0
+        uses: actions/cache/restore@v4
         id: cache_store
         with:
           path: |
@@ -263,7 +263,7 @@ jobs:
           retention-days: 3
 
       - name: Rust cache store
-        uses: actions/cache/save@v4.2.0
+        uses: actions/cache/save@v4
         if: steps.cache_store.outputs.cache-hit != 'true'
         with:
           path: |
